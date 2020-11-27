@@ -1,1 +1,38 @@
-running build_ext
+/usr/local/lib/python3.8/dist-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /mnt/c/src/python/Python-Raytracer/sightpy/utils/cyvec3.pyx
+  tree = Parsing.p_module(s, pxd, full_module_name)
+Compiling cyvec3.pyx because it changed.
+[1/1] Cythonizing cyvec3.pyx
+Traceback (most recent call last):
+  File "./compile.py", line 9, in <module>
+    ext_modules = cythonize('cyvec3.pyx'),
+  File "/usr/local/lib/python3.8/dist-packages/Cython/Build/Dependencies.py", line 1102, in cythonize
+    cythonize_one(*args)
+  File "/usr/local/lib/python3.8/dist-packages/Cython/Build/Dependencies.py", line 1208, in cythonize_one
+    result = compile_single(pyx_file, options, full_module_name=full_module_name)
+  File "/usr/local/lib/python3.8/dist-packages/Cython/Compiler/Main.py", line 727, in compile_single
+    return run_pipeline(source, options, full_module_name)
+  File "/usr/local/lib/python3.8/dist-packages/Cython/Compiler/Main.py", line 515, in run_pipeline
+    err, enddata = Pipeline.run_pipeline(pipeline, source)
+  File "/usr/local/lib/python3.8/dist-packages/Cython/Compiler/Pipeline.py", line 355, in run_pipeline
+    data = run(phase, data)
+  File "/usr/local/lib/python3.8/dist-packages/Cython/Compiler/Pipeline.py", line 335, in run
+    return phase(data)
+  File "/usr/local/lib/python3.8/dist-packages/Cython/Compiler/Pipeline.py", line 52, in generate_pyx_code_stage
+    module_node.process_implementation(options, result)
+  File "/usr/local/lib/python3.8/dist-packages/Cython/Compiler/ModuleNode.py", line 143, in process_implementation
+    self.generate_c_code(env, options, result)
+  File "/usr/local/lib/python3.8/dist-packages/Cython/Compiler/ModuleNode.py", line 385, in generate_c_code
+    self.body.generate_function_definitions(env, code)
+  File "/usr/local/lib/python3.8/dist-packages/Cython/Compiler/Nodes.py", line 442, in generate_function_definitions
+    stat.generate_function_definitions(env, code)
+  File "/usr/local/lib/python3.8/dist-packages/Cython/Compiler/Nodes.py", line 442, in generate_function_definitions
+    stat.generate_function_definitions(env, code)
+  File "/usr/local/lib/python3.8/dist-packages/Cython/Compiler/Nodes.py", line 4853, in generate_function_definitions
+    self.body.generate_function_definitions(self.scope, code)
+  File "/usr/local/lib/python3.8/dist-packages/Cython/Compiler/Nodes.py", line 442, in generate_function_definitions
+    stat.generate_function_definitions(env, code)
+  File "/usr/local/lib/python3.8/dist-packages/Cython/Compiler/Nodes.py", line 2030, in generate_function_definitions
+    exc_check = self.caller_will_check_exceptions()
+  File "/usr/local/lib/python3.8/dist-packages/Cython/Compiler/Nodes.py", line 2669, in caller_will_check_exceptions
+    return self.entry.type.exception_check
+AttributeError: 'PyObjectType' object has no attribute 'exception_check'
