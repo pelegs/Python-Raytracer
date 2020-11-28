@@ -1,0 +1,1 @@
+rm utils/func_list_occurances; while read func; do num=$(grep -P "\.$func" -orI --exclude-dir utils ../ | wc -l); printf "$func: $num\n" >> utils/func_list_occurances; done < utils/func_list; cat utils/func_list_occurance
